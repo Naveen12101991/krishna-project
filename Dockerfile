@@ -5,6 +5,7 @@ WORKDIR /var/www/html
 RUN unzip canvas.zip 
 RUN rm -rf canvas.zip &&\ 
     cp -rf canvas/*  . &&\
-    rm -rf canvas 
+    rm -rf canvas
+    touch ccc
 EXPOSE 80
 CMD ["/usr/sbin/httpd" , "-D" ,"FOREGROUND" ]
